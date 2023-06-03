@@ -1,36 +1,36 @@
 [virtual_machines]
 
 ; nginx-proxy-manager
-10.0.1.1
+10.0.1.1 git_package=git vim_package=vim neofetch_package=neovim
 
 ; homer
-10.0.1.2
+10.0.1.2 git_package=git vim_package=vim neofetch_package=neovim
 
 ; qbittorrent
-10.0.1.5
+10.0.1.5 git_package=git vim_package=vim neofetch_package=neovim
 
 ; prowlarr
-10.0.1.6
+10.0.1.6 git_package=git vim_package=vim neofetch_package=neovim
 
 ; radarr
-10.0.1.7
+10.0.1.7 git_package=git vim_package=vim neofetch_package=neovim
 
 ; sonarr
-10.0.1.8
+10.0.1.8 git_package=git vim_package=vim neofetch_package=neovim
 
 ; lidarr
-10.0.1.9
+10.0.1.9 git_package=git vim_package=vim neofetch_package=neovim
 
 ; cloudflare-updater
-10.0.1.10
+10.0.1.10 git_package=git vim_package=vim neofetch_package=neovim
 
 ; youtubedl-material
-10.0.1.13
+10.0.1.13 git_package=git vim_package=vim neofetch_package=neovim
 
 ; minecraft-vanilla-1.19.4
-10.0.2.2
+10.0.2.2 git_package=git vim_package=vim neofetch_package=neovim
 
 [containers]
 
 ; jellyfin
-10.0.1.3
+10.0.1.3 git_package=git vim_package=vim neofetch_package=neovim
