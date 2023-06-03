@@ -38,3 +38,14 @@
 ; jellyfin
 10.0.1.3
 
+[docker]
+
+; nextcloud
+10.0.1.11
+
+[nextcloud]
+
+; nextcloud
+10.0.1.11
+
+
