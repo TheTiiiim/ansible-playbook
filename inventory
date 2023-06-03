@@ -1,1 +1,36 @@
-10.0.0.30
+[ubuntu_vm]
+
+; nginx-proxy-manager
+10.0.1.1
+
+; homer
+10.0.1.2
+
+; qbittorrent
+10.0.1.5
+
+; prowlarr
+10.0.1.6
+
+; radarr
+10.0.1.7
+
+; sonarr
+10.0.1.8
+
+; lidarr
+10.0.1.9
+
+; cloudflare-updater
+10.0.1.10
+
+; youtubedl-material
+10.0.1.13
+
+; minecraft-vanilla-1.19.4
+10.0.2.2
+
+[debian_ct]
+
+; jellyfin
+10.0.1.3
