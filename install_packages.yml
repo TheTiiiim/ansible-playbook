@@ -7,20 +7,24 @@
   - name: update repository index
     apt:
       update_cache: yes
+    when: ansible_distribution in ["Debian", "Ubuntu"]
 
   - name: install git package
     apt:
       name: git
       state: latest
+    when: ansible_distribution in ["Debian", "Ubuntu"]
  
   - name: install vim package
     apt:
       name: vim
       state: latest
+    when: ansible_distribution in ["Debian", "Ubuntu"]
 
   - name: install neofetch package
     apt:
       name: neofetch
       state: latest
+    when: ansible_distribution in ["Debian", "Ubuntu"]
 
  
