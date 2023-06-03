@@ -1,6 +1,6 @@
 ---
 
-- hosts: "debian*:ubuntu*"
+- hosts: "all"
   become: true
   tasks:
 

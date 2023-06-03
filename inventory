@@ -1,4 +1,4 @@
-[ubuntu_vm]
+[virtual_machines]
 
 ; nginx-proxy-manager
 10.0.1.1
@@ -30,7 +30,7 @@
 ; minecraft-vanilla-1.19.4
 10.0.2.2
 
-[debian_ct]
+[containers]
 
 ; jellyfin
 10.0.1.3
