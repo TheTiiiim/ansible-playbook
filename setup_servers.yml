@@ -81,7 +81,7 @@
 
     - name: copy smb share credentials to host
       copy:
-        src: files/smbcredentials
+        src: files/mediacredentials
         dest: /home/thetiiiim/.smbcredentials
         owner: thetiiiim
         group: thetiiiim
@@ -92,3 +92,39 @@
       shell: mountpoint -q /mnt/share || mount /mnt/share
       when: ansible_distribution == "Ubuntu"
 
+- hosts: nextcloud
+  become: true
+  tasks:
+
+    - name: install cifs-utils
+      apt: 
+        name: cifs-utils
+        update_cache: yes
+      when: ansible_distribution == "Ubuntu"
+
+    - name: make sure /mnt/share directory exists 
+      file:
+        path: "/mnt/share"
+        state: directory
+      when: ansible_distribution == "Ubuntu"
+
+    - name: add smb share to /etc/fstab
+      blockinfile:
+        path: /etc/fstab
+        block: |
+          //10.0.0.3/nextcloud /mnt/share cifs credentials=/home/thetiiiim/.smbcredentials,uid=33,gid=0,file_mode=0750,dir_mode=0750,noauto,x-systemd.automount,x-systemd.device-timeout=10,user 0 0
+      when: ansible_distribution == "Ubuntu"
+
+
+    - name: copy smb share credentials to host
+      copy:
+        src: files/nextcloudcredentials
+        dest: /home/thetiiiim/.smbcredentials
+        owner: thetiiiim
+        group: thetiiiim
+        mode: "0600"
+      when: ansible_distribution == "Ubuntu"
+
+    - name: mount smb share to destination
+      shell: mountpoint -q /mnt/share || mount /mnt/share
+      when: ansible_distribution == "Ubuntu"
